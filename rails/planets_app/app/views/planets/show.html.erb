@@ -1,0 +1,21 @@
+
+<p>
+  <strong>Name:</strong>
+  <%= @planet.name %>
+</p>
+ 
+<p>
+  <strong>Distance from Sun:</strong>
+  <%= @planet.distance_from_sun %>
+</p>
+
+<h2>Moons</h2>
+<%= render @planet.moons %>
+
+
+
+<h2>Add a Moon:</h2>
+<%= render 'moons/form' %>
+ 
+<%= link_to 'Edit', edit_planet_path(@planet) %> |
+<%= link_to 'Back', planets_path %>

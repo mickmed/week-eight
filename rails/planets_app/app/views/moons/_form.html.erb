@@ -1,0 +1,13 @@
+<%= form_with(model: [ @planet, @planet.moons.build ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :distance %><br>
+    <%= form.text_area :distance_from_planet %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>

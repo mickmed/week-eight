@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Houses</h1>
+<div id='map'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibWlja21lZCIsImEiOiJjanFzdTVtZjEwMnY0NDJzM2g4MXNuNTM0In0.VDbqZxEh0hxXAixRjS9FzA';
+var map = new mapboxgl.Map({
+  container: 'map', // container id
+  style: 'mapbox://styles/mapbox/streets-v9', // stylesheet location
+  center: [-74.50, 40], // starting position [lng, lat]
+  zoom: 9 // starting zoom
+});
+</script>
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  
+    <% @houses.each do |house| %>
+      <tr>
+        <td><%= link_to 'Show', house %></td>
+        <td><%= link_to 'Edit', edit_house_path(house) %></td>
+        <td><%= link_to 'Destroy', house, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New House', new_house_path %>

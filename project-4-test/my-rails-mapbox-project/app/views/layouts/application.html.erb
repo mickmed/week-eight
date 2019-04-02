@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyRailsMapboxProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js'></script>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload', :defer => 'defer'%>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

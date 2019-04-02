@@ -1,0 +1,13 @@
+
+
+
+<h1>Dinos rule ok</h1>
+<h3>Ask me a question</h3>
+<h3>Answer: I Dino</h3>
+<h1>Dino by name</h1>
+<ul>
+  <% @dinos.each do |dino| %>
+    <li><%= link_to dino, dino_path(dino) %></li>
+  <% end %>
+</ul>
+

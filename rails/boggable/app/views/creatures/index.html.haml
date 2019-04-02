@@ -1,0 +1,15 @@
+%button.add-new= link_to 'Add New Creature', new_creature_path 
+
+- @creatures.each do |creature| 
+    %h2= link_to creature.name, creature_path(creature) 
+    %p#description= creature.description
+    
+    %button= link_to 'show', creature_path(creature) 
+    %button= link_to 'edit', edit_creature_path(creature) 
+    %button= link_to 'destroy', creature_path(creature),
+        method: :delete,
+        data: {confirm: 'are you sure?' } 
+    %hr
+    
+
+

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyText
+  distance_from_planet: MyText
+  radius: MyText
+  orbit_period: MyText
+  planet: one
+
+two:
+  name: MyText
+  distance_from_planet: MyText
+  radius: MyText
+  orbit_period: MyText
+  planet: two

@@ -1,0 +1,15 @@
+<p>
+  <strong>Moon Name:</strong>
+  <%= moon.name %>
+</p>
+ 
+<p>
+  <strong>Distance from planet:</strong>
+  <%= moon.distance_from_planet %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Moon', [moon.planet, moon],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

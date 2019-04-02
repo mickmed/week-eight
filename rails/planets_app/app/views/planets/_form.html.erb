@@ -1,0 +1,14 @@
+<%= form_with(model: [ @planet ], local: true) do |form| %>
+  <p>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </p>
+  <p>
+    <%= form.label :distance_from_sun %><br>
+    <%= form.text_field :distance_from_sun %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
+

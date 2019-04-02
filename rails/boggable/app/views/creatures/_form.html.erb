@@ -1,0 +1,13 @@
+<%= form_with(model: [@creature], local:true) do |form| %>
+<p>
+<%=  form.label :name %>
+<%=  form.text_field :name%>
+</p>
+<p>
+<%=  form.label :description %>
+<%=  form.text_field :description %>
+</p>
+<p>
+<%= form.submit %>
+
+<% end %>
